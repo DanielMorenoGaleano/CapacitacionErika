@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "44ec0fc7-aaa4-4d35-9858-fb382617f3aa",
+		"name": "Siniestro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2227257",
+		"_collection_link": "https://interstellar-star-565174.postman.co/workspace/Vass-Latam~d9bfb566-51b3-4d26-a2ad-6aa260d5f5c2/collection/2227257-44ec0fc7-aaa4-4d35-9858-fb382617f3aa?action=share&creator=2227257&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Visual Time",
+			"item": [
+				{
+					"name": "Informcacion Bancaria",
+					"item": [
+						{
+							"name": "PostBankInformationThird",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ExternalId\": \"15466\",\r\n    \"ClaimId\": \"\",\r\n    \"OcurrenceDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"RequestDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"NameTitularAccount\": \"\",\r\n    \"PersonType\": \"\",\r\n    \"IdDocumentTypeId\": 3,\r\n    \"IdDocumentNumber\": \"5027331033\",\r\n    \"LastnameTitularAccount\": \"\",\r\n    \"AccountType\": \"\",\r\n    \"FinancialEntity\": 1,\r\n    \"AccountNumber\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://http-router-colmena.us-e1.cloudhub.io/:protocol/:host/:port/ExternalServices/api/ClaimBankInformation/PostBankInformationThird",
+									"protocol": "https",
+									"host": [
+										"http-router-colmena",
+										"us-e1",
+										"cloudhub",
+										"io"
+									],
+									"path": [
+										":protocol",
+										":host",
+										":port",
+										"ExternalServices",
+										"api",
+										"ClaimBankInformation",
+										"PostBankInformationThird"
+									],
+									"variable": [
+										{
+											"key": "protocol",
+											"value": "HTTP"
+										},
+										{
+											"key": "host",
+											"value": "172.28.67.175"
+										},
+										{
+											"key": "port",
+											"value": "8082"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ClaimDocuments/PostClaimDocuments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExternalId\": \"\",\r\n    \"ClaimId\": \"\",\r\n    \"OcurrenceDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"RequestDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"IdDocumentTypeIdApplicant\": 1,\r\n    \"IdDocumentNumberApplicant\": \"\",\r\n    \"IdDocumentTypeIdInsured\": 1,\r\n    \"IdDocumentNumberInsured\": \"\",\r\n    \"SupportDocuments\": \"\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://http-router-colmena.us-e1.cloudhub.io/:protocol/:host/:port/ExternalServices/api/ClaimDocuments/PostClaimDocuments",
+							"protocol": "https",
+							"host": [
+								"http-router-colmena",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								":protocol",
+								":host",
+								":port",
+								"ExternalServices",
+								"api",
+								"ClaimDocuments",
+								"PostClaimDocuments"
+							],
+							"variable": [
+								{
+									"key": "protocol",
+									"value": "HTTP"
+								},
+								{
+									"key": "host",
+									"value": "172.28.67.175"
+								},
+								{
+									"key": "port",
+									"value": "8082"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener caso siniestro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"IdDocumentTypeId\": 2,\r\n    \"IdDocumentNumber\": \"1012444251\",\r\n    \"CoverageId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://http-router-colmena.us-e1.cloudhub.io/:protocol/:host/:port/ExternalServices/api/ClaimRegistration/GetClaimRegistration",
+							"protocol": "https",
+							"host": [
+								"http-router-colmena",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								":protocol",
+								":host",
+								":port",
+								"ExternalServices",
+								"api",
+								"ClaimRegistration",
+								"GetClaimRegistration"
+							],
+							"variable": [
+								{
+									"key": "protocol",
+									"value": "HTTP"
+								},
+								{
+									"key": "host",
+									"value": "172.28.67.175"
+								},
+								{
+									"key": "port",
+									"value": "8082"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrar caso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExternalId\": \"\",\r\n    \"ClaimId\": \"\",\r\n    \"OcurrenceDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"EventCause\": 1,\r\n    \"Declaration\": \"\",\r\n    \"RequestDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"IdDocumentTypeIdApplicant\": 1,\r\n    \"IdDocumentNumberApplicant\": \"\",\r\n    \"ApplicantFirstName\": \"\",\r\n    \"ApplicantSecondName\": \"\",\r\n    \"ApplicantLastname\": \"\",\r\n    \"ApplicantLastname2\": \"\",\r\n    \"ApplicantPhone\": \"\",\r\n    \"ApplicantEmail\": \"\",\r\n    \"IdDocumentTypeIdInsured\": 1,\r\n    \"IdDocumentNumberInsured\": \"\",\r\n    \"InsuredFirstName\": \"\",\r\n    \"InsuredSecondName\": \"\",\r\n    \"InsuredLastname\": \"\",\r\n    \"InsuredLastname2\": \"\",\r\n    \"PolicyId\": \"\",\r\n    \"CertificateId\": \"\",\r\n    \"LineOfBusiness\": \"\",\r\n    \"ProductId\": \"\",\r\n    \"CoverageNumber\": \"\",\r\n    \"CoverageName\": \"\",\r\n    \"CreditNumber\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://http-router-colmena.us-e1.cloudhub.io/:protocol/:host/:port/ExternalServices/api/Claimregistration/PostClaimRegistration",
+							"protocol": "https",
+							"host": [
+								"http-router-colmena",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								":protocol",
+								":host",
+								":port",
+								"ExternalServices",
+								"api",
+								"Claimregistration",
+								"PostClaimRegistration"
+							],
+							"variable": [
+								{
+									"key": "protocol",
+									"value": "HTTP"
+								},
+								{
+									"key": "host",
+									"value": "172.28.67.175"
+								},
+								{
+									"key": "port",
+									"value": "8082"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mulesoft",
+			"item": [
+				{
+					"name": "claim-accidents",
+					"item": [
+						{
+							"name": "claim-accidents",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:8083/api/claim-accidents",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"claim-accidents"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Losses Cases",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{client_id_method}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret_method}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"externalID\": \"\",\r\n    \"claimNumber\": \"\",\r\n    \"dateOcurrenceClaim\": \"\",\r\n    \"CauseEvent\": \"\",\r\n    \"statement\": \"\",\r\n    \"dateApplication\": \"\",\r\n    \"documentTypeapplicant\": \"\",\r\n    \"documentNumberApplicant\": \"\",\r\n    \"namesApplicant\": \"\",\r\n    \"surnamesApplicant\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"documentTypeInsured\": \"\",\r\n    \"documentNumberInsured\": \"\",\r\n    \"namesInsured\": \"\",\r\n    \"surnamesInsured\": \"\",\r\n    \"polizaNumber\": \"\",\r\n    \"certificateNumber\": \"\",\r\n    \"bouquetNumber\": \"\",\r\n    \"productNumber\": \"\",\r\n    \"codeCoverage\": \"\",\r\n    \"descriptionCoverage\": \"\",\r\n    \"moduleCode\": \"\",\r\n    \"creditNumber\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:8081/api/claims/losses-cases",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"claims",
+								"losses-cases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attach Support",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{client_id_method}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret_method}}",
+								"type": "text"
+							},
+							{
+								"key": "grant_type",
+								"value": "{{grant_type}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"externalID\": \"\",\r\n    \"claimNumber\": \"\",\r\n    \"dateOcurrenceClaim\": \"\",\r\n    \"dateInsurance\": \"\",\r\n    \"CauseEvent\": \"\",\r\n    \"statement\": \"\",\r\n    \"dateApplication\": \"\",\r\n    \"documentTypeApplicant\": \"\",\r\n    \"documentNumberApplicant\": \"\",\r\n    \"namesApplicant\": \"\",\r\n    \"surnamesApplicant\": \"\",\r\n    \"phoneNumber\": \"\",\r\n    \"email\": \"\",\r\n    \"doumentTypeInsured\": \"\",\r\n    \"doumentNumberInsured\": \"\",\r\n    \"namesInsured\": \"\",\r\n    \"surnamesInsured\": \"\",\r\n    \"polizaNumber\": \"\",\r\n    \"certificateNumber\": \"\",\r\n    \"bouquetNumber\": \"\",\r\n    \"productNumber\": \"\",\r\n    \"codeCoverage\": \"\",\r\n    \"descriptionCoverage\": \"\",\r\n    \"moduleCode\": \"\",\r\n    \"creditNumber\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:8081/api/claims/losses-cases/attach-support",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"claims",
+								"losses-cases",
+								"attach-support"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.collectionVariables.set(\"temp_access_key\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{client_id_token}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret_token}}",
+								"type": "text"
+							},
+							{
+								"key": "grant_type",
+								"value": "{{grant_type}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://authentication-services-colmena-{{env}}.us-e1.cloudhub.io/token",
+							"protocol": "https",
+							"host": [
+								"authentication-services-colmena-{{env}}",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "third-banking-information",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "{{client_id_method}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret_method}}",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ExternalId\": \"\",\r\n    \"ClaimNumber\": \"\",\r\n    \"OcurrenceDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"RequestDate\": \"2023-02-17T11:04:52.4080305-05:00\",\r\n    \"FirstNameTitularAccount\": \"\",\r\n    \"LastNameTitularAccount\" :\"\",\r\n    \"PersonType\": \"\",\r\n    \"IdDocumentTypeId\": 2,\r\n    \"IdDocumentNumber\": \"\",\r\n    \"AccountType\": \"\",\r\n    \"FinancialEntity\": 1,\r\n    \"AccountNumber\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cs-visual-time-sapi-qa-v1.us-e1.cloudhub.io/api/claims/losses-cases/creation-third-banking-information",
+							"protocol": "https",
+							"host": [
+								"cs-visual-time-sapi-qa-v1",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"claims",
+								"losses-cases",
+								"creation-third-banking-information"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "policies-and-claim-incidents",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-correlation-id",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://cs-visual-time-sapi-qa-v1.us-e1.cloudhub.io/api/insurances/policies-and-claim-incidents?documentType=123456789&coverageCode=343&documentNumber=2",
+							"protocol": "https",
+							"host": [
+								"cs-visual-time-sapi-qa-v1",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"",
+								"api",
+								"insurances",
+								"policies-and-claim-incidents"
+							],
+							"query": [
+								{
+									"key": "documentType",
+									"value": "123456789"
+								},
+								{
+									"key": "coverageCode",
+									"value": "343"
+								},
+								{
+									"key": "documentNumber",
+									"value": "2"
+								},
+								{
+									"key": "coverageCode",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://cs-jotform-sapi-qa-v1.us-e1.cloudhub.io/api/form/230514295408959/submissions?filter=%257B%2522id%2522%253A%2B%25225575502868714670877%2522%257D'",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "client_id",
+								"value": "d1adb9542f59493dbb3ebb4b67063e19",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "985C5de699514705988cCE5594B8c346",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://cs-jotform-sapi-qa-v1.us-e1.cloudhub.io/api/form/230514295408959/submissions?filter=%257B%2522id%2522%253A%2B%25225575502868714670877%2522%257D'",
+							"protocol": "https",
+							"host": [
+								"cs-jotform-sapi-qa-v1",
+								"us-e1",
+								"cloudhub",
+								"io"
+							],
+							"path": [
+								"api",
+								"form",
+								"230514295408959",
+								"submissions"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%257B%2522id%2522%253A%2B%25225575502868714670877%2522%257D'"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{temp_access_key}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "temp_access_key",
+			"value": "",
+			"disabled": true
+		},
+		{
+			"key": "client_id_token",
+			"value": "2a5e9b91896b4b46bb3467e382359636",
+			"type": "string"
+		},
+		{
+			"key": "client_secret_token",
+			"value": "6cfB95b7De8842f8bBCEc1f20cB2198e",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://cs-visual-time-sapi-qa-v1.us-e1.cloudhub.io/",
+			"type": "string"
+		},
+		{
+			"key": "env",
+			"value": "qa",
+			"type": "string"
+		},
+		{
+			"key": "client_id",
+			"value": "d1adb9542f59493dbb3ebb4b67063e19",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "985C5de699514705988cCE5594B8c346",
+			"type": "string"
+		},
+		{
+			"key": "grant_type",
+			"value": "CLIENT_CREDENTIALS",
+			"type": "string"
+		},
+		{
+			"key": "temp_access_key",
+			"value": ""
+		}
+	]
+}
